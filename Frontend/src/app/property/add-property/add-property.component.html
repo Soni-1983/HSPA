@@ -1,3 +1,37 @@
-<p>add-property works!</p>
-<button class="btn btn-primary"  (click)="onBack()">Back</button>
-
+<div class="container">
+  <div class="card">
+    <div class="card-header">
+      Add New Property
+    </div>
+    <div class="card-body">
+      <form (ngSubmit)="onSubmit(Form)" #Form="ngForm">
+        <div class="form-group col-12">
+          <label for="name">Name <app-required-field></app-required-field></label>
+          <input type="text" class="form-control" #_Name="ngModel" ngModel name="Name" required minlength="5"/>
+          <span class="error-block" *ngIf="!_Name.valid && _Name.touched">
+            <span *ngIf="_Name.errors?.['required']">Please enter Name</span>
+            <span *ngIf="_Name.errors?.['minlength']">Name must be atleast 5 characters long</span>
+          </span>
+        </div>
+        <div class="form-group col-12">
+          <label for="type">Type <app-required-field></app-required-field></label>
+          <input type="text" class="form-control" #_Type="ngModel" ngModel name="Type" required />
+          <span class="error-block" *ngIf="!_Type.valid && _Type.touched">
+            Please enter Name
+          </span>
+        </div>
+        <div class="form-group col-12">
+          <label for="price">Price <app-required-field></app-required-field></label>
+          <input type="number" class="form-control" #_Price="ngModel" ngModel name="Price" required />
+          <span class="error-block" *ngIf="!_Price.valid && _Price.touched">
+            Please enter Name
+          </span>
+        </div>
+        <div class="m-2">
+          <button type="submit" [disabled]="!Form.valid" class="btn btn-primary m-2">Save</button>
+          <button type="reset" class="btn btn-danger">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
