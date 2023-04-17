@@ -1,0 +1,66 @@
+[
+  {
+    "Id": 1,
+    "SellRent": 1,
+    "Type": "House",
+    "Price": 12000,
+    "Name": "Birla House",
+    "Image":  "1.png"
+  },
+  {
+    "Id": 2,
+    "SellRent": 2,
+    "Type": "Villa",
+    "Price": 14000,
+    "Name": "Sameer Villa",
+    "Image": "2.jpg"
+  },
+  {
+    "Id": 3,
+    "SellRent": 2,
+    "Type": "Farm Hourse",
+    "Price": 5000,
+    "Name": "Soni's Farm House",
+    "Image": "4.png"
+  },
+  {
+    "Id": 4,
+    "SellRent": 1,
+    "Type": "Apartment",
+    "Price": 11000,
+    "Name": "Belle View Towers",
+    "Image": "6.jpg"
+  },
+  {
+    "Id": 5,
+    "SellRent": 1,
+    "Type": "Apartment",
+    "Price": 12000,
+    "Name": "Signature Towers",
+    "Image": "7.jpg"
+  },
+  {
+    "Id": 6,
+    "SellRent": 2,
+    "Type": "House",
+    "Price": 25000,
+    "Name": "Soni House",
+    "Image": "5.png"
+  },
+  {
+    "Id": 7,
+    "SellRent": 2,
+    "Type": "House",
+    "Price": 30000,
+    "Name": "Moolani House",
+    "Image": "3.jpg"
+  },
+  {
+    "Id": 8,
+    "SellRent": 2,
+    "Type": "House",
+    "Price": 35000,
+    "Name": "Dwarkani House",
+    "Image": "8.jpg"
+  }
+]

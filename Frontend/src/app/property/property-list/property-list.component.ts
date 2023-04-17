@@ -1,60 +1,33 @@
-import { Component } from '@angular/core';
+
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { IProperty } from '../../interfaces/IProperty.Interface';
+import { HousingServceService } from '../../services/housing.servce.service';
 
 @Component({
   selector: 'app-property-list',
   templateUrl: './property-list.component.html',
   styleUrls: ['./property-list.component.css']
 })
-export class PropertyListComponent {
+export class PropertyListComponent implements OnInit {
 
-  properties: Array<any> = [
-    {
-    "Id": 1,
-    "Type": "House",
-    "Price": 12000,
-    "Name": "Birla House"
-    },
-    {
-      "Id": 2,
-      "Type": "Villa",
-      "Price": 14000,
-      "Name": "Sameer Villa"
-    },
-    {
-      "Id": 3,
-      "Type": "Farm Hourse",
-      "Price": 5000,
-      "Name": "Soni's Farm House"
-    },
-    {
-      "Id": 4,
-      "Type": "Apartment",
-      "Price": 11000,
-      "Name": "Belle View Towers"
-    },
-    {
-      "Id": 5,
-      "Type": "Apartment",
-      "Price": 12000,
-      "Name": "Signature Towers"
-    },
-    {
-      "Id": 6,
-      "Type": "House",
-      "Price": 25000,
-      "Name": "Soni House"
-    },
-    {
-      "Id": 7,
-      "Type": "House",
-      "Price": 30000,
-      "Name": "Moolani House"
-    },
-    {
-      "Id": 8,
-      "Type": "House",
-      "Price": 35000,
-      "Name": "Dwarkani House"
+  properties: Array<IProperty> = [];
+  SellRent: number = 1;
+
+  constructor(private housingService: HousingServceService,
+    private route: ActivatedRoute) {
+  }
+
+  ngOnInit() {
+    if (this.route.snapshot.url.toString()) {
+      this.SellRent = 2;
     }
-  ]
+    this.housingService.getAllProperties(this.SellRent).subscribe
+      (
+      result => {
+                  this.properties = result;
+                },
+       error => { console.log(error) }
+    );
+  }
 }

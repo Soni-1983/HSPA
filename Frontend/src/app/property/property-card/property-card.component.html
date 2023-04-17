@@ -2,19 +2,19 @@
 <div class="card ">
   <div class="card-body">
     <div class="card-img-wrapper">
-      <img src="assets/images/th.jpg" class="card-img-top imageThunbnail" alt="Default House" style="height:250px; width:250px; " />
+      <img src="assets/images/{{p.Image}}" class="card-img-top imageThunbnail" alt="Default House" style="height:250px; width:250px; " />
       <ul class="list-inline text-center member-icons animate">
         <li class="list-inline-item">
-          <button type="button" class="btn btn-primary"><i class="far fa-edit"></i></button>
+          <button type="button" class="btn btn-primary" routerLink="/property-detail/{{p.Id}}"><i class="far fa-edit"></i></button>
         </li>
         <li class="list-inline-item">
           <button type="button" class="btn btn-primary"><i class="far fa-address-book"></i></button>
         </li>
       </ul>
     </div>
+    <h1>{{p.Name}}</h1>
     <h2>{{p.Type}}</h2>
     <h3>{{p.Price}}</h3>
-    <h1>{{p.Name}}</h1>
   </div>
  
 </div>
