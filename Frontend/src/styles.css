@@ -1,4 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~bootstrap/dist/css/bootstrap.css";
+@import '../node_modules/alertifyjs/build/css/alertify.min.css';
+@import '../node_modules/alertifyjs/build/css/themes/bootstrap.min.css';
+
+.ng-invalid.ng-touched {
+  border-color: red;
+}
+
+.error-block {
+  color: red;
+}
+
+.dropdown-menu {
+  width:180px;
+}
+  .dropdown-menu a {
+    white-space: normal;
+    width: auto;
+  }
+
+  .dropdown-menu > li {
+    position: relative;
+    width: auto;
+  }
+
+    .dropdown-menu > li > i {
+      position: absolute;
+      left: 0;
+      top: 3px;
+      width: auto;
+    }
+
+
+
 
 
